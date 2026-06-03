@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# AI Test Case Generator
 
-First, run the development server:
+AI-powered web application that automatically generates software test cases from user requirements.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Features
+
+- Generate test cases from text requirements
+- Upload requirement files (.txt)
+- AI-powered test case generation using Gemini API
+- MongoDB history storage
+- View previously generated test cases
+- Download test cases as PDF
+- Copy test cases to clipboard
+- Cache repeated requests
+
+## Tech Stack
+
+### Frontend
+- Next.js
+- React
+- TypeScript
+
+### Backend
+- FastAPI
+- Python
+
+### Database
+- MongoDB Atlas
+
+### AI Integration
+- Google Gemini API
+
+## Project Structure
+
+```text
+app/
+components/
+services/
+backend/
+├── main.py
+├── requirements.txt
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## API Endpoints
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Generate Test Cases
+POST /generate-testcases
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Upload Requirement File
+POST /upload-requirement
 
-## Learn More
+### Get History
+GET /history
 
-To learn more about Next.js, take a look at the following resources:
+### Delete History
+DELETE /history
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Future Improvements
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- User Authentication
+- Excel Export
+- Advanced Test Categorization
+- Multi-model AI Support
 
-## Deploy on Vercel
+## Author
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Khushbu Bansal
